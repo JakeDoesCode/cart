@@ -1,0 +1,46 @@
+.shopContainer {
+  margin: 1em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  color: antiquewhite;
+}
+.productCard {
+  font-family: 'Special Elite';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  border: 1px saddlebrown solid;
+  padding: 10px;
+}
+.info {
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  padding: 10px;
+  width: 150px;
+  height: 150px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+button {
+  font-size: 1em;
+  font-family: 'Special Elite';
+  font-weight: bold;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10%;
+  background-color: burlywood;
+  border: none;
+  cursor: pointer;
+}
