@@ -1,7 +1,7 @@
 import React from 'react';
 import cigar from '../assets/cigar.png';
 import cart from '../assets/cigars.png';
-import '/home/jake/repos/cart/src/styles.css';
+import '/src/styles.css';
 import { Link, useResolvedPath, useMatch } from 'react-router-dom';
 
 const NavBar = ({ inCart, handleShow }) => {

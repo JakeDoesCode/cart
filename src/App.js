@@ -1,6 +1,6 @@
 import NavBar from './Components/NavBar';
 import Home from './Components/Home';
-import '/home/jake/repos/cart/src/styles.css';
+import 'src/styles.css';
 import { Routes, Route } from 'react-router-dom';
 import Shop from './Components/Shop';
 import Cart from './Components/Cart';

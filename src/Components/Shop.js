@@ -1,7 +1,7 @@
 import React from 'react';
-import products from '/home/jake/repos/cart/src/data.js';
+import products from '/src/data.js';
 import Card from './Card';
-import '/home/jake/repos/cart/src/Components/card.css';
+import '/src/Components/card.css';
 
 const Shop = ({ handleClick }) => {
   return (
