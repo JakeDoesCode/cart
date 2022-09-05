@@ -1,6 +1,6 @@
 import React from 'react';
 import '/home/jake/repos/cart/src/Components/card.css';
-const Card = ({ item, handleClick }) => {
+const Card = ({ item, onAdd }) => {
   const { product, price, img } = item;
 
   return (
@@ -14,7 +14,7 @@ const Card = ({ item, handleClick }) => {
         <p>${price.toFixed(2)}</p>
         <button
           onClick={() => {
-            handleClick(item);
+            onAdd(item);
           }}
         >
           Add to Cart

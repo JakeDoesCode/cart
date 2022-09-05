@@ -1,10 +1,11 @@
-import React, {useEffect} from 'react';
+import React from 'react';
+
 import { Link } from 'react-router-dom';
 import '../Components/cartStyle.css';
 
-
-const Cart = ({ inCart}) => {
+const Cart = ({ inCart, onAdd, onRemove }) => {
   let total = [];
+
   const findTotal = () => {
     inCart.map((item) => {
       let cost = Number(item.price.toFixed(2)) * item.quant;
@@ -14,8 +15,12 @@ const Cart = ({ inCart}) => {
     return price.toFixed(2);
   };
 
-
-const cartTotal = findTotal();
+  const cartTotal = findTotal();
+  console.log(
+    inCart.map((items) => {
+      return items;
+    })
+  );
 
   return inCart.length > 0 ? (
     <div className="cartContainer">
@@ -24,9 +29,23 @@ const cartTotal = findTotal();
           <div>{item.product}</div>
           <div>${(item.price.toFixed(2) * item.quant).toFixed(2)}</div>
           <div className="quantityBox">
-            <button className="add">+</button>
+            <button
+              className="add"
+              onClick={() => {
+                onAdd(item);
+              }}
+            >
+              +
+            </button>
             {item.quant}
-            <button className="sub">-</button>
+            <button
+              className="sub"
+              onClick={() => {
+                onRemove(item);
+              }}
+            >
+              -
+            </button>
           </div>
         </div>
       ))}

@@ -4,7 +4,7 @@ import cart from '../assets/cigars.png';
 import '/home/jake/repos/cart/src/styles.css';
 import { Link, useResolvedPath, useMatch } from 'react-router-dom';
 
-const NavBar = ({ inCart, handleShow }) => {
+const NavBar = ({ handleShow, quantity }) => {
   // experimenting with different style methods for logo and cart image
   const logoSize = {
     height: '4rem',
@@ -34,7 +34,7 @@ const NavBar = ({ inCart, handleShow }) => {
       <div className="cart" onClick={handleShow}>
         <Link to="/cart">
           <img src={cart} style={cartStyle} alt="Cigar Box Shopping Cart"></img>
-          <span className="inCart">{inCart}</span>
+          <span className="inCart">{quantity}</span>
         </Link>
       </div>
     </nav>
